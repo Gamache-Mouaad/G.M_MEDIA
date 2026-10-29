@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT Grabber - Fast Video & Audio Downloader</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="logo-badge">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <div class="mydt">
+          <h1 class="my-titel">G.M <span class="my-d">MEDIA</span></h1>
+          <p class="tagline">
+            Download YouTube videos in Premiere & CapCut ready MP4 video or
+            MP4/MP3 audio
+          </p>
+        </div>
+      </header>
+
+      <!-- Search Form -->
+      <section class="search-card">
+        <form id="fetch-form">
+          <div class="input-wrapper">
+            <i class="fa-solid fa-link search-icon"></i>
+            <input
+              type="url"
+              id="url"
+              placeholder="Paste YouTube video link here..."
+              required
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button
+              type="button"
+              id="paste-btn"
+              class="secondary-btn"
+              title="Paste from clipboard"
+            >
+              <i class="fa-regular fa-clipboard"></i> Paste
+            </button>
+          </div>
+          <button type="submit" id="fetch-btn" class="primary-btn">
+            <span>Fetch Video</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+      </section>
+
+      <!-- Status message -->
+      <div id="status" class="status-msg hidden" role="status"></div>
+
+      <!-- Active Download Progress Card -->
+      <section id="download-progress-card" class="progress-card hidden">
+        <div class="progress-header">
+          <div class="spinner-small" id="progress-spinner"></div>
+          <div class="progress-info-text">
+            <h4 id="progress-title">Preparing your file...</h4>
+            <p id="progress-stage" class="progress-stage">
+              Contacting server...
+            </p>
+          </div>
+          <span id="progress-percent-badge" class="percent-badge">0%</span>
+        </div>
+
+        <div class="progress-bar-track">
+          <div
+            id="progress-bar-fill"
+            class="progress-bar-fill"
+            style="width: 0%"
+          ></div>
+        </div>
+
+        <div class="progress-meta">
+          <span id="progress-speed">Speed: --</span>
+          <span id="progress-eta">ETA: --</span>
+        </div>
+
+        <div id="download-success-banner" class="success-banner hidden">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Download ready! Your browser is saving the file now.</span>
+        </div>
+
+        <div id="download-error-banner" class="error-banner hidden">
+          <span id="download-error-text">Download failed.</span>
+          <button type="button" id="retry-btn" class="mini-btn">Dismiss</button>
+        </div>
+      </section>
+
+      <!-- Video Results Section -->
+      <section id="result" class="result-section hidden">
+        <!-- Media Overview Card -->
+        <div class="video-preview-card">
+          <div class="thumb-container">
+            <img id="thumb" alt="Video thumbnail" src="" />
+            <span id="duration-badge" class="duration-badge">00:00</span>
+          </div>
+          <div class="video-meta-info">
+            <h2 id="title" class="video-title">Video Title</h2>
+            <div class="meta-row">
+              <span id="uploader" class="channel-name">Channel</span>
+              <span class="dot-divider">•</span>
+              <span id="views" class="view-count">0 views</span>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="quick-actions">
+              <button id="quick-best-btn" class="quick-btn best-video-btn">
+                <i class="fa-solid fa-file-video"></i>
+                <span>Download Best MP4 (with Audio)</span>
+              </button>
+              <button id="quick-m4a-btn" class="quick-btn best-audio-btn">
+                <i class="fa-solid fa-music"></i>
+                <span>Download MP4 Audio (.m4a)</span>
+              </button>
+              <button id="quick-mp3-btn" class="quick-btn best-audio-btn">
+                <i class="fa-solid fa-headphones"></i>
+                <span>Download MP3 Audio</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Format Selection Tabs -->
+        <div class="formats-container">
+          <div class="formats-tabs">
+            <button class="tab-btn active" data-tab="video-formats">
+              <i class="fa-solid fa-film"></i> Video Formats (.MP4)
+            </button>
+            <button class="tab-btn" data-tab="audio-formats">
+              <i class="fa-solid fa-headphones"></i> Audio Only (.M4A / .MP3)
+            </button>
+          </div>
+
+          <div id="video-formats" class="tab-content active">
+            <div id="video-list" class="format-grid"></div>
+          </div>
+
+          <div id="audio-formats" class="tab-content">
+            <div id="audio-list" class="format-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== NEW: FEATURES SECTION ===== -->
+      <section class="features-section">
+        <div class="features-heading">
+          <h2 class="features-title">
+            Why Choose G.M <span class="accent">MEDIA</span>
+          </h2>
+          <p class="features-subtitle">
+            Powerful tools designed for creators and editors
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="feature-name">Lightning Fast</h3>
+            <p class="feature-desc">
+              Optimized servers deliver your downloads in seconds, not minutes.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <h3 class="feature-name">HD Video</h3>
+            <p class="feature-desc">
+              Get videos in up to 4K quality, perfect for editing projects.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <h3 class="feature-name">Audio Extraction</h3>
+            <p class="feature-desc">
+              Extract crystal-clear MP3 or M4A audio from any video.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-file-export"></i>
+            </div>
+            <h3 class="feature-name">Editor Ready</h3>
+            <p class="feature-desc">
+              Files formatted for Premiere Pro, CapCut, and DaVinci Resolve.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="feature-name">Safe & Private</h3>
+            <p class="feature-desc">
+              No tracking, no logs, no data stored. Your downloads stay yours.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <h3 class="feature-name">Any Device</h3>
+            <p class="feature-desc">
+              Works on phone, tablet, or desktop no app installation needed.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <h3 class="feature-name">100% Free</h3>
+            <p class="feature-desc">
+              No sign-up, no hidden fees, no daily download limits.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="feature-name">One-Click Download</h3>
+            <p class="feature-desc">
+              Paste a link, pick a format, and download instantly.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ===== END FEATURES SECTION ===== -->
+    </main>
+
+    <script src="v.js"></script>
+  </body>
+</html>

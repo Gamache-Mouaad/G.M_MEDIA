@@ -1,0 +1,57 @@
+# ===== DEPENDENCIES =====
+node_modules/
+jspm_packages/
+
+# ===== ENVIRONMENT / SECRETS =====
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ===== BUILD OUTPUT =====
+dist/
+build/
+.next/
+out/
+
+# ===== LOGS =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== CACHE =====
+.npm/
+.cache/
+.parcel-cache/
+.eslintcache
+
+# ===== DOWNLOADED FILES (this app) =====
+downloads/
+*.mp4
+*.mp3
+*.m4a
+*.webm
+
+# ===== OS FILES =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== EDITOR / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== TESTING =====
+coverage/
+.nyc_output/
+
+# ===== MISC =====
+*.log
+tmp/
+temp/
