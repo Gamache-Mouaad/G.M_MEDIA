@@ -55,3 +55,4 @@ coverage/
 *.log
 tmp/
 temp/
+*.exe
