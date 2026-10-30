@@ -1,5 +1,5 @@
 
-```markdown
+
 # 🎬 G.M MEDIA — YouTube Video & Audio Downloader
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
@@ -76,7 +76,7 @@ yt-grabber/
 ├── package.json          # Project dependencies and scripts
 ├── .gitignore            # Excluded files (node_modules, .exe, etc.)
 └── README.md             # Project documentation
-```
+
 
 ---
 
