@@ -86,12 +86,12 @@ Follow these steps to run the project locally on your machine.
 
 ### Prerequisites
 
-You need **Node.js** installed on your computer. 
+You need **Node.js installed on your computer. 
 - [Download Node.js here](https://nodejs.org/) (v18 or higher is recommended).
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository:**
    ```bash
    git clone https://github.com/Gamache-Mouaad/yt-grabber.git
    ```
@@ -101,17 +101,17 @@ You need **Node.js** installed on your computer.
    cd yt-grabber
    ```
 
-3. **Install the dependencies:**
+3. Install the dependencies:**
    ```bash
    npm install
    ```
 
-4. **Start the server:**
+4. Start the server:**
    ```bash
    npm start
    ```
 
-5. **Open your browser:**
+5. Open your browser:**
    Navigate to `http://localhost:3000` (or the port specified in your `server.js`).
 
 ---
@@ -140,7 +140,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## 📄 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
@@ -153,7 +153,7 @@ Downloading copyrighted material from YouTube without permission may violate You
 
 ## 👤 Author
 
-Gamache Mouaad**
+Gamache Mouaad
 - GitHub: [@Gamache-Mouaad](https://github.com/Gamache-Mouaad)
 - Project Link: [https://github.com/Gamache-Mouaad/yt-grabber](https://github.com/Gamache-Mouaad/yt-grabber)
 
