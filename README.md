@@ -38,25 +38,25 @@ The interface is built using a custom **Dark Tech + Orange** design system, focu
 
 ## ✨ Features
 
-- ⚡ **Lightning Fast:** Optimized backend server to fetch and process media quickly.
-- 🎬 **HD Video Support:** Download videos in resolutions up to 4K.
-- 🎵 **Audio Extraction:** Convert and download crystal-clear MP3 or M4A audio.
-- 🎞️ **Editor Ready:** Formats are perfectly optimized for video editing software.
-- 🛡️ **Safe & Private:** No tracking, no logs, and zero data stored on our servers.
-- 📱 **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.
-- 🎨 **Premium UI:** Custom dark-mode design system with Font Awesome icons.
+- ⚡ Lightning Fast: Optimized backend server to fetch and process media quickly.
+- 🎬 HD Video Support: Download videos in resolutions up to 4K.
+- 🎵 Audio Extraction: Convert and download crystal-clear MP3 or M4A audio.
+- 🎞️ Editor Ready: Formats are perfectly optimized for video editing software.
+- 🛡️ Safe & Private: No tracking, no logs, and zero data stored on our servers.
+- 📱 Responsive Design: Works seamlessly on desktop, tablet, and mobile devices.
+- 🎨 Premium UI:Custom dark-mode design system with Font Awesome icons.
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
+Frontend:
 - HTML5 / CSS3
 - Vanilla JavaScript (ES6+)
 - Font Awesome 6 (Icons)
 - Google Fonts (Plus Jakarta Sans & JetBrains Mono)
 
-**Backend:**
+Backend:
 - Node.js
 - Express.js
 - `yt-dlp` (Core download engine)
@@ -96,7 +96,7 @@ You need **Node.js installed on your computer.
    git clone https://github.com/Gamache-Mouaad/yt-grabber.git
    ```
 
-2. **Navigate to the project directory:**
+2. Navigate to the project directory:**
    ```bash
    cd yt-grabber
    ```
