@@ -157,6 +157,5 @@ Gamache Mouaad
 - GitHub: [@Gamache-Mouaad](https://github.com/Gamache-Mouaad)
 - Project Link: [https://github.com/Gamache-Mouaad/yt-grabber](https://github.com/Gamache-Mouaad/yt-grabber)
 
-⭐If you like this project, please give it a star!** It helps a lot!
-```
+⭐If you like this project, please give it a star!It helps a lot!
 
