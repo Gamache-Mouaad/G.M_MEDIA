@@ -7,7 +7,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-> A fast, dark-themed web application to download YouTube videos and audio in editor-ready formats (MP4, M4A, MP3). Built with vanilla JavaScript, Node.js, and a custom "Dark Tech + Orange" UI design system.
+> A fast, dark themed web application to download YouTube videos and audio in editor-ready formats (MP4, M4A, MP3). Built with vanilla JavaScript, Node.js, and a custom Dark Tech + Orange UI design system.
 
 ![G.M Media Preview](public/items/use.png)
 
