@@ -30,7 +30,7 @@
 
 ## 🚀 About the Project
 
-**G.M MEDIA** is a sleek, high-performance web application designed for content creators, editors, and developers. It allows users to easily fetch YouTube videos and extract them as high-quality video (MP4) or audio (MP3/M4A) files, ready to be imported directly into Premiere Pro, CapCut, or DaVinci Resolve.
+G.M MEDIA is a sleek, high-performance web application designed for content creators, editors, and developers. It allows users to easily fetch YouTube videos and extract them as high-quality video (MP4) or audio (MP3/M4A) files, ready to be imported directly into Premiere Pro, CapCut, or DaVinci Resolve.
 
 The interface is built using a custom **Dark Tech + Orange** design system, focusing on high contrast, technical details, and a premium user experience.
 
